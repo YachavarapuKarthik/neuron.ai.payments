@@ -27,6 +27,8 @@
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            border: none;
+            cursor: pointer;
             transition: background-color 0.3s ease;
         }
         .pay-now-button:hover {
@@ -42,7 +44,13 @@
             <img src="https://as1.ftcdn.net/v2/jpg/06/16/18/18/1000_F_616181843_l404nbV07vMiXDZ1IhWiqZRDpetpuigu.jpg" alt="UPI Image 2" width="100">
         </div>
         <p>To make a payment, click the "Pay Now" button below:</p>
-        <a class="pay-now-button" href="upi://pay?pa=neuron.ai@axl&pn=Neuron%20AI&tn=Payment%20for%20services&am=349&cu=INR">Pay Now</a>
+        <button class="pay-now-button" onclick="redirectToUPI()">Pay Now</button>
+
+        <script>
+            function redirectToUPI() {
+                window.location.href = "upi://pay?pa=neuron.ai@axl&pn=Neuron%20AI&tn=Payment%20for%20services&am=349&cu=INR";
+            }
+        </script>
     </div>
 </body>
 </html>
